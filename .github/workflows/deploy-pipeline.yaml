@@ -57,3 +57,7 @@ jobs:
               --repo="$GITHUB_REPOSITORY" \
               --title="New release for ${GITHUB_REPOSITORY#*/} ${tag#v}" \
               --generate-notes
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: zipped-bundle
